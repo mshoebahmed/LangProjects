@@ -1,0 +1,109 @@
+// folder = [{
+//     "id": " id.value",
+//     "dateOrdered": new Date("2015-05-01"),
+//     "customerName": "A",
+//     "data": [{
+//         "materialCode": "mc.value",
+//         "materialName": "mc.value",
+//         "qty": 1,
+//         "pricePerUnit": 10,
+//         "total":10,
+        
+
+//     }, {
+//         "materialCode": "mc.value",
+//         "materialName": "mc.value",
+//         "qty": Math.floor(Math.random() * 11),
+//         "pricePerUnit": Math.floor(Math.random() * 101),
+//         "total": 100
+        
+//     }, {
+//         "materialCode": "mc.value",
+//         "materialName": "mc.value",
+//         "qty": Math.floor(Math.random() * 11),
+//         "pricePerUnit": Math.floor(Math.random() * 101),
+//         "total":200
+        
+//     }]
+// },
+// {
+//     "id": " id.value",
+//     "dateOrdered": new Date("2010-05-01"),
+//     "customerName": "B",
+//     "data": [{
+//         "materialCode": "mc.value",
+//         "materialName": "mc.value",
+//         "qty": Math.floor(Math.random() * 11),
+//         "pricePerUnit": Math.floor(Math.random() * 101),
+//         "total": 400
+        
+
+//     }, {
+//         "materialCode": "mc.value",
+//         "materialName": "M",
+//         "qty": Math.floor(Math.random() * 11),
+//         "pricePerUnit": Math.floor(Math.random() * 101),
+//         "total": 100
+        
+//     }, {
+//         "materialCode": "mc.value",
+//         "materialName": "mc.value",
+//         "qty": Math.floor(Math.random() * 11),
+//         "pricePerUnit": Math.floor(Math.random() * 101),
+//         "total": 500
+        
+//     }]
+// },
+// {
+//     "id": " id.value",
+//     "dateOrdered": new Date("2005-05-01"),
+//     "customerName": "Z",
+//     "data": [{
+//         "materialCode": "mc.value",
+//         "materialName": "mc.value",
+//         "qty": Math.floor(Math.random() * 11),
+//         "pricePerUnit": Math.floor(Math.random() * 101),
+//         "total": 10
+
+//     }, {
+//         "materialCode": "mc.value",
+//         "materialName": "mc.value",
+//         "qty": Math.floor(Math.random() * 11),
+//         "pricePerUnit": Math.floor(Math.random() * 101),
+//         "total":200
+//     }, {
+//         "materialCode": "mc.value",
+//         "materialName": "mc.value",
+//         "qty": Math.floor(Math.random() * 11),
+//         "pricePerUnit": Math.floor(Math.random() * 101),
+//         "total": 150
+//     }]
+// }, 
+// {
+//     "id": " id.value",
+//     "dateOrdered": new Date("2019-05-01"),
+//     "customerName": "D",
+//     "data": [{
+//         "materialCode": "mc.value",
+//         "materialName": "mc.value",
+//         "qty": Math.floor(Math.random() * 11),
+//         "pricePerUnit": Math.floor(Math.random() * 101),
+//         "total": 250
+
+//     }, {
+//         "materialCode": "mc.value",
+//         "materialName": "mc.value",
+//         "qty": Math.floor(Math.random() * 11),
+//         "pricePerUnit": Math.floor(Math.random() * 101),
+//         "total": 50
+//     }, {
+//         "materialCode": "mc.value",
+//         "materialName": "mc.value",
+//         "qty": Math.floor(Math.random() * 11),
+//         "pricePerUnit": Math.floor(Math.random() * 101),
+//         "total": 10
+//     }]
+// }
+
+
+// ]

@@ -1,0 +1,331 @@
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="javasc.js"></script>
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .tb5 {
+            padding: 0;
+            height: 30px;
+            position: relative;
+            left: 0;
+            outline: none;
+            border: 1px solid #cdcdcd;
+            border-color: rgba(0, 0, 0, .15);
+            background-color: white;
+            font-size: 16px;
+        }
+
+        #myDIV {
+            width: 100%;
+            padding: 5px 0;
+            text-align: center;
+            background-color: red;
+            margin-top: 20px;
+            display: none;
+        }
+
+        #myDIV1 {
+            width: 100%;
+            padding: 5px 0;
+            text-align: center;
+            background-color: green;
+            margin-top: 20px;
+            display: none;
+        }
+
+        #myDIV2 {
+            width: 100%;
+            padding: 5px 0;
+            text-align: center;
+          
+            margin-top: 20px;
+            display: none;
+        }
+
+        #myDIV3 {
+            width: 100%;
+            padding: 5px 0;
+            text-align: center;
+            background-color:white;
+            margin-top: 20px;
+            display: block;
+        }
+
+        /* #myDIV4 {
+            width: 100%;
+            padding: 5px 0;
+            text-align: center;
+            background-color: skyblue;
+            margin-top: 20px;
+            display: block;
+        } */
+
+        #myDIV5 {
+            width: 100%;
+            padding: 5px 0;
+            text-align: center;
+            background-color: whitesmoke;
+            margin-top: 20px;
+            display: none;
+        }
+        #myDIV6 {
+            width: 100%;
+            padding: 5px 0;
+            text-align: center;
+            background-color: whitesmoke;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div id="myDIV3">
+            <div class="container">
+                <h2>Order Infromation</h2>
+                <div class="table-responsive">
+                    <form action="javascript:void(0);">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label>Order id:</label>
+                                        <input type="number" id="orderId"></td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td><label>Order Date</label>
+                                        <input type="date" id="orderDate"></td>
+                                </tr>
+                                <tr></tr>
+                                <tr></tr>
+                                <tr></tr>
+
+                                <tr>
+                                    <td><label>Customer Name</label>
+                                        <input type="text" id="customerName"></td>
+                                </tr>
+                            </tbody>
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>sno</td>
+                                        <td>Material Code</td>
+                                        <td>Material Name</td>
+                                        <td>Qty</td>
+                                        <td>Price Per Unit</td>
+                                        <td>Total</td>
+                                        <td>Edit</td>
+                                        <td>Delete</td>
+                                    </tr>
+                                </tbody>
+                                <tbody id='dataTable'>
+                                </tbody>
+                            </table>
+                            
+                            </tr>
+                        </tbody>
+                            <table class='table'>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    
+                                <td>Discount % :</td>
+                                <td id='disc' class="tb5">
+                                    <input type="number" pattern="/^-?\d+\.?\d*$/" id='Discount'
+                                        onKeyPress="if(this.value.length==3) return false;"
+                                        onchange="discount(document.getElementById('Discount').value)" />
+                                </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Total Amount:</td>
+                                    <td ><p id='eTotalAmount'> </p></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Discount Amount:</td>
+                                    <td id='discA'></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Gross Amount :</td>
+                                    <td id='GA'></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        </table>
+                        <center>
+                            <div id="myDIV1">
+                                <form class="table" action="javascript:void(0);">
+                                    <center><input type="submit" id="bttnA" value="Add New Record" onclick='add2()'></center>
+                        
+                                    <center><input type="submit" value="Show All records" onclick='viewAllR(folder)'></center>
+                                </form>
+                            </div>
+                        </center>
+                        </table>
+                        <form class="table" action="javascript:void(0);">
+                            <table class="table">
+                                <tr>
+                                <input type="text" id="materialCode" placeholder="Material Code">
+                                <input type="text" id="materialName" placeholder="Material Name">
+                                <input type="number" id="qty" placeholder="Qty">
+                                <input type="number" id="pricePerUnit" placeholder="Price Per Unit">
+                                <input type="submit" value="Add" onclick='add()'>
+                            </table>
+                        </form>
+                        <div id="myDIV">
+                            <form class="table" action="javascript:void(0);">
+                                <input type="text" id="ematerialCode" placeholder="Material Code" >
+                                <input type="text" id="ematerialName" placeholder="Material Name" >
+                                <input type="number" id="eqty" placeholder="Qty" >
+                                <input type="number" id="epricePerUnit" placeholder="Price Per Unit" >
+                                <input type="submit" value="edit" onclick="editT.editFo()">
+                            </form>
+                            <input type="text" id='hidden'>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </center>
+
+
+
+
+
+    <div id="myDIV2">
+        <h1>View Records</h1>
+        
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <select name="filter" id="filterBy">
+                            <option value="Customer">Filter By Customer Name(Ascending)</option>
+                            <option value="date" >Filter By Date</option>
+                            <option value="aPrice">Filter By Price(Ascending)</option>
+                            <option value="dPrice">Filter By Price(Descending)</option>
+                            <option value="searchCustomer"  >Search Customer</option>
+                        </select>
+                        <input type="submit" value="filter" onclick="filtered()">
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+                        <select name="search" id="searchBy" onchange="filtered()">
+                            <option>Search Options</option>
+                            <option value="date" >Search By Date</option>
+                            <option value="searchCustomer"  >Search Customer</option>
+                        </select>
+                    </td>
+            </tbody>
+    </div>
+    </table>
+    <div id="myDIV5" >
+        <table class="table">
+            <td>
+                <label> from Date</label>
+                <input type="date" id="fromDate">
+            </td>
+            <td>
+                <label> to Date </label>
+                <input type="date" id="toDate">
+            </td>
+            <td>
+                <input type="submit" value='Filter' onclick="byDate()">
+            </td>
+        </table>
+    </div>
+    <div id="myDIV6" >
+        <table class="table">
+            <td>
+              
+                <input type="text" placeholder="Search" id="searchName">
+            </td>
+            <td>
+               <p id="cError" style="color: red;"></p>
+            </td>
+            <td>
+                <input type="submit" value='Search' onclick="searchCustomerBy()">
+            </td>
+        </table>
+    </div>
+
+    <form action="javascript:void(0);" id='data'>
+        <table class="table">
+
+            <tbody>
+                <tr>
+                    <td>sno</td>
+                    <td>Order ID</td>
+                    <td>Order Date</td>
+                    <td>Customer Name</td>
+                    <td>Number Of Orders</td>
+                    <td>Total Amount</td>
+                    <td>discount percentage</td>
+                    <td>Discount Amount</td>
+                    <td>Gross Amount</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </tr>
+            </tbody>
+
+            <tbody id='viewTable'>
+            </tbody>
+        </table>
+    </form>
+    <center><input type="submit"value="back" onclick="backB()"></center>
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+</body>

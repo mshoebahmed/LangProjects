@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        assingment
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="javasc.js"></script>
+<style>
+    #spoiler3 {
+        display: block ;
+    }
+
+    #spoiler4 {
+        display: none;
+    }
+</style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <center>
+            <div id="spoiler3" role="aria-hidden">
+            <form action="javascript:void(0);">
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1>Login</h1>
+                <br>
+                <br>
+                <div class="table-responsive">
+
+                    <table class="table">
+
+
+                        <input type="text" placeholder="username" id="username">
+                        <br>
+                        <br>
+                        <input type="password" placeholder="password" id="password">
+                        <br>
+                        <br>
+                        <input type="submit" value="log in" onclick="login()">
+                        <br>
+                        <br>
+                        <br>
+                        <p id="error"></p>
+                        <br>
+                        <br>
+                        <br><input type="submit" onclick="signupshow()" value='Sign Up'>
+
+                    </table>
+
+
+                </div>
+            </form>
+        </div>
+        </center>
+        <div id="spoiler4" role="aria-hidden">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Sign Up</h1>
+        <br>
+        <br>
+        
+        <form action="javascript:void(0);">
+
+            <center> <input type="text" placeholder="New Username" id="uid" required></center>
+            
+            <br> <center><input type="password" placeholder="New Password" id="pid" required></center>
+            <br><center><p>Enter password not less than 6 characters</p></center>
+            <br> <center> <input type="password" placeholder="Confirm Password" id="cpid" required></center>
+            <br> <center><input type="submit" onclick="signup(document.getElementById('uid').value,document.getElementById('pid').value,document.getElementById('cpid').value)"></center>
+            <br> <center><h1 id="errors" style="color:red" ></h1>
+         </form>    
+</div>
+    </div>
+
+    <script>
+        console.log(users);
+    </script>
+    
+</body>

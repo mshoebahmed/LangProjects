@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="javasc.js"></script>
+
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .tb5 {
+            padding: 0;
+            height: 30px;
+            position: relative;
+            left: 0;
+            outline: none;
+            border: 1px solid #cdcdcd;
+            border-color: rgba(0, 0, 0, .15);
+            background-color: white;
+            font-size: 16px;
+        }
+
+        #spoiler {
+            display: none;
+        }
+
+        #spoiler2 {
+            display: none;
+        }
+    </style>
+    <title>
+        Assignment
+    </title>
+</head>
+
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <h2>Order Infromation</h2>
+        <div class="table-responsive">
+
+            <center>
+                <form action="javascript:void(0);">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>sales order</p>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="order id" id='oid'>
+                                    <input type="submit" value="search" onclick="asearch()">
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    <p style="color:red" id="customername"></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="spoiler" role="aria-hidden">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>s.no</td>
+                                    <td>Name</td>
+                                    <td>Code</td>
+                                    <td>Description</td>
+                                    <td>Quantity</td>
+                                    <td>Price Per Unit</td>
+                                    <td>Total Amount</td>
+                                </tr>
+                            <tbody id='details'>
+
+                            </tbody>
+
+                            <tbody id='accounts'>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Total Amount</td>
+                                    <td id='TotalAmount'></td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><input type='submit' value='%'
+                                            onclick="discount(document.getElementById('Discount').value)"></td>
+                                    <td>Discount % :</td>
+                                    <td id='disc' class="tb5">
+                                        <input type="number" pattern="/^-?\d+\.?\d*$/" id='Discount'
+                                            onKeyPress="if(this.value.length==3) return false;" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                            </tbody>
+
+                    </div>
+                    </table>
+
+
+            
+                        <table class='table'>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Discount Amount:</td>
+                                    <td id='discA'></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Gross Amount :</td>
+                                    <td id='GA'></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        
+    </div>
+
+
+
+
+
+    </form>
+
+    </center>
+    <script>
+        function CloseInput() {
+            document.getElementById('spoiler').style.display = 'none';
+
+        }
+        CloseInput();
+
+        function CloseInput2() {
+            document.getElementById('spoiler2').style.display = 'none';
+        }
+        CloseInput2();
+    </script>
+    <script>
+        console.log(users);
+    </script>
+
+
+
+</body>
